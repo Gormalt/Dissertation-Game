@@ -10,6 +10,7 @@ var phase = 0
 var set = 0
 
 
+
 func _ready():
 	rng.randomize()
 	var config = {

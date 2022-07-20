@@ -6039,36 +6039,31 @@ transform = Transform( 4.09576, -2.86788, 0, 2.86788, 4.09576, 0, 0, 0, 5, -12.1
 [node name="Control" type="Control" parent="."]
 margin_right = 1280.0
 margin_bottom = 720.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Counter" type="Label" parent="Control"]
 margin_left = 1120.09
 margin_top = 6.72717
 margin_right = 1230.09
 margin_bottom = 97.7272
-custom_fonts/font = SubResource( 277 )
 custom_colors/font_color = Color( 0.992157, 0.992157, 0.992157, 1 )
+custom_fonts/font = SubResource( 277 )
 text = "Q"
 script = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Label" type="Label" parent="Control"]
 margin_left = 20.0
 margin_top = 20.0
 margin_right = 736.0
 margin_bottom = 80.0
-custom_fonts/font = SubResource( 278 )
 custom_colors/font_color = Color( 0.992157, 0.992157, 0.992157, 1 )
+custom_fonts/font = SubResource( 278 )
 text = "Collect as much garbage as you can before time runs out!"
 align = 1
 valign = 1
 
 [node name="LevelTimer" type="Timer" parent="."]
 wait_time = 15.0
+
 [connection signal="RedCupCollected" from="SpatialGarbage/RedCup" to="Control/Counter" method="_on_RedCup_RedCupCollected"]
 [connection signal="body_entered" from="SpatialGarbage/RedCup" to="SpatialGarbage/RedCup" method="_on_RedCup_body_entered"]
 [connection signal="RedCupCollected" from="SpatialGarbage/RedCup2" to="Control/Counter" method="_on_RedCup_RedCupCollected"]

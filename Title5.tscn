@@ -38,8 +38,8 @@ margin_left = 2.0
 margin_top = 80.0
 margin_right = 1282.0
 margin_bottom = 260.0
-custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0.580392, 0.556863, 0.556863, 1 )
+custom_fonts/font = SubResource( 1 )
 text = "Beachcomber"
 align = 1
 valign = 1
@@ -52,8 +52,8 @@ margin_left = 2.0
 margin_top = 275.0
 margin_right = 1282.0
 margin_bottom = 455.0
-custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0.992157, 0.992157, 0.992157, 1 )
+custom_fonts/font = SubResource( 2 )
 text = "Do you feel well practiced at the game 
 and ready to move on?"
 align = 1
@@ -67,10 +67,10 @@ margin_left = 50.0
 margin_top = 500.0
 margin_right = 707.0
 margin_bottom = 636.0
-custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.580392, 0.556863, 0.556863, 1 )
 custom_colors/font_color_hover = Color( 0.992157, 0.992157, 0.992157, 1 )
 custom_colors/font_color_pressed = Color( 0.580392, 0.556863, 0.556863, 1 )
+custom_fonts/font = SubResource( 3 )
 text = "No, Practice More"
 flat = true
 script = ExtResource( 3 )
@@ -83,15 +83,16 @@ margin_left = 730.0
 margin_top = 500.0
 margin_right = 1247.0
 margin_bottom = 636.0
-custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0.580392, 0.556863, 0.556863, 1 )
 custom_colors/font_color_hover = Color( 0.992157, 0.992157, 0.992157, 1 )
 custom_colors/font_color_pressed = Color( 0.580392, 0.556863, 0.556863, 1 )
+custom_fonts/font = SubResource( 4 )
 text = "Yes, Continue"
 flat = true
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
 [connection signal="pressed" from="Button-Play-3-A" to="Button-Play-3-A" method="_on_ButtonPlay3A_pressed"]
 [connection signal="pressed" from="Button-Play-3-B" to="Button-Play-3-B" method="_on_ButtonPlay3B_pressed"]

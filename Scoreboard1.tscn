@@ -32,9 +32,6 @@ font_data = ExtResource( 1 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="ColorRect" type="ColorRect" parent="."]
 margin_right = 1280.0
@@ -45,8 +42,8 @@ color = Color( 0, 0, 0, 1 )
 margin_top = 40.0
 margin_right = 1280.0
 margin_bottom = 96.0
-custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0.992157, 0.992157, 0.992157, 1 )
+custom_fonts/font = SubResource( 1 )
 text = "Scoreboard"
 align = 1
 __meta__ = {
@@ -57,8 +54,8 @@ __meta__ = {
 margin_top = 150.0
 margin_right = 640.0
 margin_bottom = 201.0
-custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0.992157, 0.992157, 0.992157, 1 )
+custom_fonts/font = SubResource( 2 )
 text = "Username"
 align = 1
 __meta__ = {
@@ -70,8 +67,8 @@ margin_left = 640.0
 margin_top = 150.0
 margin_right = 1280.0
 margin_bottom = 201.0
-custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.992157, 0.992157, 0.992157, 1 )
+custom_fonts/font = SubResource( 3 )
 text = "Score"
 align = 1
 
@@ -79,8 +76,8 @@ align = 1
 margin_top = 250.0
 margin_right = 640.0
 margin_bottom = 301.0
-custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0.992157, 0.992157, 0.992157, 1 )
+custom_fonts/font = SubResource( 4 )
 text = "[Insert Usernames Here]"
 align = 1
 __meta__ = {
@@ -92,8 +89,8 @@ margin_left = 640.0
 margin_top = 250.0
 margin_right = 1280.0
 margin_bottom = 301.0
-custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 0.992157, 0.992157, 0.992157, 1 )
+custom_fonts/font = SubResource( 5 )
 text = "Q"
 align = 1
 __meta__ = {
@@ -104,18 +101,16 @@ __meta__ = {
 margin_top = 575.0
 margin_right = 1280.0
 margin_bottom = 714.0
-custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 0.580392, 0.556863, 0.556863, 1 )
 custom_colors/font_color_hover = Color( 0.992157, 0.992157, 0.992157, 1 )
 custom_colors/font_color_pressed = Color( 0.580392, 0.556863, 0.556863, 1 )
+custom_fonts/font = SubResource( 6 )
 text = "Play Again"
 flat = true
 script = ExtResource( 3 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Timer" type="Timer" parent="Button-Scoreboard1-Play-Again"]
 wait_time = 3.0
 autostart = true
+
 [connection signal="pressed" from="Button-Scoreboard1-Play-Again" to="Button-Scoreboard1-Play-Again" method="_on_ButtonScoreboard1PlayAgain_pressed"]

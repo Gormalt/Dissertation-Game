@@ -37,10 +37,11 @@ func _on_ButtonPlay1A_pressed():
 	
 	#Cool send function that shouldn't be used
 	#send()
-	var rndm = Global.randomNum(0, 3);
-	if(rndm == 1):
+	#Cool Chagne
+	var rndm = Global.randomNum(0, 2);
+	if(rndm == 0):
 		get_tree().change_scene("res://Title2.tscn")
-	elif(rndm == 2):
+	elif(rndm == 1):
 		get_tree().change_scene("res://Title3.tscn")
 	else:
 		get_tree().change_scene("res://Title4.tscn")
