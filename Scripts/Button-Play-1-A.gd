@@ -37,8 +37,8 @@ func _on_ButtonPlay1A_pressed():
 	
 	#Cool send function that shouldn't be used
 	#send()
-	#Cool Chagne
-	var rndm = Global.randomNum(0, 2);
+	Global.recorder.goToSet(0)
+	var rndm = Global.randomNum(0, 2)
 	if(rndm == 0):
 		get_tree().change_scene("res://Title2.tscn")
 	elif(rndm == 1):

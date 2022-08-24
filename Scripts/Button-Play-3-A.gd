@@ -6,5 +6,6 @@ func _ready():
 
 
 func _on_ButtonPlay3A_pressed():
-	
-	get_tree().change_scene("res://Title2.tscn")
+	Global.set = 1
+	Global.recorder.goToSet(1)
+	get_tree().change_scene("res://Title6.tscn")

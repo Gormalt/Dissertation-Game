@@ -8,8 +8,32 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "Node",
+"class": "BoardEntry",
+"language": "GDScript",
+"path": "res://Scripts/BoardEntry.gd"
+}, {
+"base": "Node",
+"class": "Recorder",
+"language": "GDScript",
+"path": "res://Scripts/Recorder.gd"
+}, {
+"base": "Node",
+"class": "RunResult",
+"language": "GDScript",
+"path": "res://Scripts/RunResult.gd"
+}, {
+"base": "Node",
+"class": "SetResult",
+"language": "GDScript",
+"path": "res://Scripts/SetResult.gd"
+} ]
 _global_script_class_icons={
+"BoardEntry": "",
+"Recorder": "",
+"RunResult": "",
+"SetResult": ""
 }
 
 [application]

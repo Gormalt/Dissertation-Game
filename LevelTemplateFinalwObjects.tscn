@@ -6039,8 +6039,8 @@ margin_left = 1120.09
 margin_top = 6.72717
 margin_right = 1230.09
 margin_bottom = 97.7272
-custom_fonts/font = SubResource( 277 )
 custom_colors/font_color = Color( 0.992157, 0.992157, 0.992157, 1 )
+custom_fonts/font = SubResource( 277 )
 text = "Q"
 script = ExtResource( 28 )
 __meta__ = {
@@ -6049,6 +6049,7 @@ __meta__ = {
 
 [node name="LevelTimer" type="Timer" parent="."]
 wait_time = 10.0
+
 [connection signal="RedCupCollected" from="SpatialGarbage/RedCup" to="Control/Counter" method="_on_RedCup_RedCupCollected"]
 [connection signal="body_entered" from="SpatialGarbage/RedCup" to="SpatialGarbage/RedCup" method="_on_RedCup_body_entered"]
 [connection signal="RedCupCollected" from="SpatialGarbage/RedCup2" to="Control/Counter" method="_on_RedCup_RedCupCollected"]
