@@ -5,9 +5,9 @@ class_name BoardEntry
 
 var score
 var pName
-var effort
 
-func _init(nm, sc, eff):
+
+func _init(nm, sc):
 	score = sc
 	pName = nm
-	effort = eff
+

@@ -18,3 +18,9 @@ func getVers(vers):
 		if(run.version == vers):
 			count = count+1
 	return count
+
+func getRuns():
+	var runStrings = []
+	for run in runs:
+		runStrings.append(run.getResult())
+	return runStrings	

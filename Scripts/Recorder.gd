@@ -20,5 +20,18 @@ func addRun(run, setNo = set):
 	dataList[setNo].addRun(run)
 	
 func getVersionHistory(vers, setNo = set):
-	print(dataList[set].getVers(vers))
-	return dataList[set].getVers(vers)
+	var num = 0
+	for x in dataList:
+		num = num + x.getVers(vers)
+	
+	return num
+
+func getSetData(set):
+	return dataList[set].getRuns()
+
+func getSetDataAll(set):
+	var data = getSetData(set)
+	var out = "/"
+	for x in data:
+		out = out + x + "/"
+	return out

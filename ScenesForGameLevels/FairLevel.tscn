@@ -6046,8 +6046,8 @@ margin_left = 1120.09
 margin_top = 6.72717
 margin_right = 1230.09
 margin_bottom = 97.7272
-custom_fonts/font = SubResource( 277 )
 custom_colors/font_color = Color( 0.992157, 0.992157, 0.992157, 1 )
+custom_fonts/font = SubResource( 277 )
 text = "Q"
 script = ExtResource( 2 )
 __meta__ = {
@@ -6059,8 +6059,8 @@ margin_left = 20.0
 margin_top = 20.0
 margin_right = 736.0
 margin_bottom = 80.0
-custom_fonts/font = SubResource( 278 )
 custom_colors/font_color = Color( 0.992157, 0.992157, 0.992157, 1 )
+custom_fonts/font = SubResource( 278 )
 text = "Collect as much garbage as you can before time runs out!"
 align = 1
 valign = 1
@@ -6070,6 +6070,7 @@ __meta__ = {
 
 [node name="LevelTimer" type="Timer" parent="."]
 wait_time = 15.0
+
 [connection signal="RedCupCollected" from="SpatialGarbage/RedCup" to="Control/Counter" method="_on_RedCup_RedCupCollected"]
 [connection signal="body_entered" from="SpatialGarbage/RedCup" to="SpatialGarbage/RedCup" method="_on_RedCup_body_entered"]
 [connection signal="RedCupCollected" from="SpatialGarbage/RedCup2" to="Control/Counter" method="_on_RedCup_RedCupCollected"]

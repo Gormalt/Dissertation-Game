@@ -4,23 +4,15 @@ extends Control
 func _ready():
 	
 	var rand = Global.randomNum(0, 2) + 4 + Global.prefM
+	Global.equalScore = rand
 	Global.curRun.setScore(rand)
 	Global.curRun.setEffort(Global.RedCups)
 	var list = Global.randNames()
-	
-	Global.equalScore = rand;
-	if(Global.vers == 1 && Global.set == 2):
-		for x in list:
-			x.score = rand
 	Global.curRun.board = list
-	
 	if(Global.vers == 0 || Global.vers == 1):
 		$LabelUsername.text = str(list[0].pName)
-		if(Global.vers == 0):
-			$LabelScore.text = str(list[0].score)
-		elif(Global.vers == 1):
-			$LabelScore.text = str(rand)
-			
+		$LabelScore.text = str(list[0].score)
+		
 		if(list.size() > 1):
 			$LabelUsername2.text = str(list[1].pName)
 			$LabelScore2.text = str(list[1].score)
@@ -59,4 +51,48 @@ func _ready():
 			$LabelUsername19.text = str(list[18].pName)
 			$LabelScore19.text = str(list[18].score)	
 			$LabelUsername20.text = str(list[19].pName)
-			$LabelScore20.text = str(list[19].score)	
+			$LabelScore20.text = str(list[19].score)
+			if(Global.vers == 0):
+				$LabelFScore1.text = str(list[0].score)
+				$LabelFScore2.text = str(list[1].score)
+				$LabelFScore3.text = str(list[2].score)
+				$LabelFScore4.text = str(list[3].score)	
+				$LabelFScore5.text = str(list[4].score)
+				$LabelFScore6.text = str(list[5].score)
+				$LabelFScore7.text = str(list[6].score)
+				$LabelFScore8.text = str(list[7].score)	
+				$LabelFScore9.text = str(list[8].score)
+				$LabelFScore10.text = str(list[9].score)
+				$LabelFScore11.text = str(list[10].score)
+				$LabelFScore12.text = str(list[11].score)	
+				$LabelFScore13.text = str(list[12].score)
+				$LabelFScore14.text = str(list[13].score)
+				$LabelFScore15.text = str(list[14].score)
+				$LabelFScore16.text = str(list[15].score)	
+				$LabelFScore17.text = str(list[16].score)
+				$LabelFScore18.text = str(list[17].score)
+				$LabelFScore19.text = str(list[18].score)
+				$LabelFScore20.text = str(list[19].score)		
+				
+			else:
+				$LabelFScore1.text = str(rand)
+				$LabelFScore2.text = str(rand)
+				$LabelFScore3.text = str(rand)
+				$LabelFScore4.text = str(rand)	
+				$LabelFScore5.text = str(rand)
+				$LabelFScore6.text = str(rand)
+				$LabelFScore7.text = str(rand)
+				$LabelFScore8.text = str(rand)	
+				$LabelFScore9.text = str(rand)
+				$LabelFScore10.text = str(rand)
+				$LabelFScore11.text = str(rand)
+				$LabelFScore12.text = str(rand)	
+				$LabelFScore13.text = str(rand)
+				$LabelFScore14.text = str(rand)
+				$LabelFScore15.text = str(rand)
+				$LabelFScore16.text = str(rand)	
+				$LabelFScore17.text = str(rand)
+				$LabelFScore18.text = str(rand)
+				$LabelFScore19.text = str(rand)
+				$LabelFScore20.text = str(rand)	
+			

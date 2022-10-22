@@ -6064,9 +6064,6 @@ custom_fonts/font = SubResource( 278 )
 text = "Collect as much garbage as you can before time runs out!"
 align = 1
 valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="LevelTimer" type="Timer" parent="."]
 wait_time = 15.0

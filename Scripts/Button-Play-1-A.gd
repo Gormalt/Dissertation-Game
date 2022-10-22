@@ -6,10 +6,12 @@ I don't know why, but any datat that I put into the body seems not to show up on
 So, I am putting the data into the header (which is a very silly thing to do).
 As a result we might just send a bunch of these things for one persons data.
 Pretty coolio - K
+
 func _ready():
 	$HTTPRequest.connect("request_completed", self, "_on_request_completed")
 
-func _on_ButtonPlay1A_pressed():
+func do_request():
+	print("SENDING REQUEST")
 	var body = "Hey"
 	# Convert data to json string:
 	var query = {"name":"Test"}
@@ -21,13 +23,31 @@ func _on_request_completed(result, response_code, headers, body):
 	#var json = JSON.parse(body.get_string_from_utf8())
 	print(response_code)
 
-"""
+
 func _ready():
 	pass
-
+"""
+func _ready():
+	$HTTPRequest.connect("request_completed", self, "_on_request_completed")
 
 func _on_ButtonPlay1A_pressed():
+	print("SENDING REQUEST")
+	var body = "Username:" + Global.username
+	# Convert data to json string:
+	var query = {"name":"Test"}
+	# Add 'Content-Type' header:
+	var headers = ["Content-Type: application/json", "Username:" + Global.username]
+	$HTTPRequest.request("https://eoxr8dm4madfrfv.m.pipedream.net", headers, false, HTTPClient.METHOD_POST, body)
+#https://desolate-headland-47135.herokuapp.com/
+#https://eoxr8dm4madfrfv.m.pipedream.net
+func _on_request_completed(result, response_code, headers, body):
+	var json = JSON.parse(body.get_string_from_utf8())
+	print(json.result)
+	start_game()
+
+func start_game():
 	
+	#do_request()
 	#yield(SilentWolf.Scores.persist_score("KylesUndeletableTest2", 99, "main", metadata), "sw_score_posted")
 	#var scores = yield(SilentWolf.Scores.get_high_scores(10), "sw_scores_received")
 	#print("scores:" + str(scores))
@@ -38,6 +58,8 @@ func _on_ButtonPlay1A_pressed():
 	#Cool send function that shouldn't be used
 	#send()
 	Global.recorder.goToSet(0)
+	Global.curRun.runNo = 0
+	Global.run = 0;
 	var rndm = Global.randomNum(0, 2)
 	if(rndm == 0):
 		get_tree().change_scene("res://Title2.tscn")
@@ -45,6 +67,7 @@ func _on_ButtonPlay1A_pressed():
 		get_tree().change_scene("res://Title3.tscn")
 	else:
 		get_tree().change_scene("res://Title4.tscn")
+
 	
 func _make_post_request(url, data_to_send, use_ssl):
 	# Convert data to json string:
@@ -52,7 +75,7 @@ func _make_post_request(url, data_to_send, use_ssl):
 	# Add 'Content-Type' header:
 	var headers = ["Content-Type: application/json"]
 	$HTTPRequest.request(url, headers, use_ssl, HTTPClient.METHOD_POST, query)
-	
+
 		
 func send():
 	# Create an HTTP request node and connect its completion signal.
@@ -74,7 +97,7 @@ func send():
 	#if error != OK:
 	#	push_error("An error occurred in the HTTP request.")
 
-
+"""
 # Called when the HTTP request is completed.
 func _http_request_completed(result, response_code, headers, body):
 	var response = parse_json(body.get_string_from_utf8())
@@ -86,4 +109,12 @@ func _http_request_completed(result, response_code, headers, body):
 func _on_request_completed(result, response_code, headers, body):
 	var json = JSON.parse(body.get_string_from_utf8())
 	print(json.result)
+"""
 
+
+func _on_LineEdit_text_changed(new_text):
+	Global.username = new_text
+
+
+func _on_HTTPRequest_request_completed(result, response_code, headers, body):
+	pass # Replace with function body.

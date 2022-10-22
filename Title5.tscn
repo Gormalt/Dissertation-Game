@@ -71,9 +71,6 @@ custom_fonts/font = SubResource( 3 )
 text = "No, Practice More"
 flat = true
 script = ExtResource( 3 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Button-Play-3-B" type="Button" parent="."]
 margin_left = 730.0
@@ -87,9 +84,6 @@ custom_fonts/font = SubResource( 4 )
 text = "Yes, Continue"
 flat = true
 script = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [connection signal="pressed" from="Button-Play-3-A" to="Button-Play-3-A" method="_on_ButtonPlay3A_pressed"]
 [connection signal="pressed" from="Button-Play-3-B" to="Button-Play-3-B" method="_on_ButtonPlay3B_pressed"]
