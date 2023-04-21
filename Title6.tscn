@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Fonts/GaroaHackerClubeBold.otf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scripts/Button-Play-2-A.gd" type="Script" id=2]
 [ext_resource path="res://Scripts/Button-Play-2-B.gd" type="Script" id=3]
 [ext_resource path="res://Scripts/Button-Play-2-C.gd" type="Script" id=4]
+[ext_resource path="res://RunDone.gd" type="Script" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 size = 115
@@ -45,19 +46,15 @@ custom_fonts/font = SubResource( 1 )
 text = "Beachcomber"
 align = 1
 valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Label2" type="Label" parent="."]
 margin_left = 2.0
-margin_top = 244.0
+margin_top = 288.0
 margin_right = 1282.0
-margin_bottom = 485.0
+margin_bottom = 529.0
 custom_colors/font_color = Color( 0.992157, 0.992157, 0.992157, 1 )
 custom_fonts/font = SubResource( 2 )
-text = "Let's play!
-
+text = "
 Click the Play button for the level 
 you want to play"
 align = 1
@@ -109,6 +106,20 @@ script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 2.0
+margin_top = 182.0
+margin_right = 1282.0
+margin_bottom = 423.0
+custom_colors/font_color = Color( 0.992157, 0.992157, 0.992157, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "
+Click the Play button for the level 
+you want to play"
+align = 1
+valign = 1
+script = ExtResource( 5 )
 
 [connection signal="pressed" from="Button-Play-2-A" to="Button-Play-2-A" method="_on_ButtonPlay2A_pressed"]
 [connection signal="pressed" from="Button-Play-2-B" to="Button-Play-2-B" method="_on_ButtonPlay2B_pressed"]

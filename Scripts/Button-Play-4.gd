@@ -13,4 +13,4 @@ func _on_ButtonPlay4_pressed():
 	Global.run = 0;
 	Global.curRun.runNo = 0
 	Global.curRun.addTime(timeElapsed);
-	get_tree().change_scene("res://Title6.tscn") # Replace with function body.
+	get_tree().change_scene("res://Title2.tscn") # Replace with function body.

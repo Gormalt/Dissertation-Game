@@ -61,14 +61,14 @@ text = "Username"
 align = 1
 
 [node name="LabelScoreTitle" type="Label" parent="."]
-margin_left = 1049.0
+margin_left = 1003.0
 margin_top = 67.0
-margin_right = 1321.0
+margin_right = 1462.0
 margin_bottom = 127.0
 rect_scale = Vector2( 0.481073, 0.481073 )
 custom_colors/font_color = Color( 0.992157, 0.992157, 0.992157, 1 )
 custom_fonts/font = SubResource( 3 )
-text = "Effort"
+text = "Cups Collected"
 align = 1
 
 [node name="LabelScoreTitle2" type="Label" parent="."]

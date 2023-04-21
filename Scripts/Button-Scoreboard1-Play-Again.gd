@@ -8,7 +8,7 @@ func _on_request_completed(result, response_code, headers, body):
 	Global.curRun = RunResult.new()
 	Global.run = Global.run+1
 	Global.curRun.runNo = Global.run
-	print(body)
+	#print(body)
 	move_on()
 
 var timeElapsed = 0.0
@@ -25,11 +25,11 @@ func _on_ButtonScoreboard1PlayAgain_pressed():
 	
 
 	
-	print(Global.recorder.getSetData(Global.set))
+	#print(Global.recorder.getSetData(Global.set))
 	Global.RedCups = 0
-	print("Set")
-	print(Global.set)
-	if(Global.run == 8 || Global.run == 9 || Global.run >= 19):
+	#print("Set")
+	#print(Global.set)
+	if((Global.run == 8 && Global.set == 0)|| (Global.run == 12  && Global.set == 5) || (Global.run == 19 && Global.set == 1) || Global.run >= 22):
 		var body = "{body:" + "Username:" + Global.username + "Set:" + str(Global.set) + "Data:" + Global.recorder.getSetDataAll(Global.set) + "'}"
 		# Convert data to json string:
 		var query = {"name":"Test"}
@@ -51,21 +51,42 @@ func move_on():
 		
 		if(Global.run % 9 == 0):
 			get_tree().change_scene("res://Title5.tscn")
-			return
+			return;
 		
 		var num = Global.getLimited()
 		if(num == 0):
 			get_tree().change_scene("res://Title2.tscn")
+			return;
 		elif(num == 1):
 			get_tree().change_scene("res://Title3.tscn")
+			return;
 		else:
 			get_tree().change_scene("res://Title4.tscn")
+			return;
 				
 	elif(Global.set != 0):
-		if(Global.set == 5 && Global.run >= 10):
+		if(Global.set != 1):	
+			if(Global.run == 1):
+				get_tree().change_scene("res://Title3.tscn");
+				return;
+			elif(Global.run == 2):
+				get_tree().change_scene("res://Title4.tscn");
+				return;
+			
+		if(Global.set == 5 && Global.run >= 13):
 			get_tree().change_scene("res://Ending.tscn")
 			return;
-		if(Global.run >= 20):
+			
+		if(Global.set == 1 && Global.run >= 20):
+			Global.set = Global.set + 1;
+			Global.run = 0;
+			if(Global.set == 4):
+				Global.checkForPreference()
+			Global.recorder.goToSet(Global.set)
+			get_tree().change_scene("res://Break.tscn")
+			return
+			
+		if(Global.run >= 23):
 			Global.set = Global.set + 1;
 			Global.run = 0;
 			if(Global.set == 4):
